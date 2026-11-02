@@ -1,4 +1,5 @@
-#assignment_partie A
+#assignment_partA: native data structure (vector,factor,list,data frame,matrix)
+
 library(tidyverse)
 
 notes<-c(10,20,25,30)
@@ -43,9 +44,9 @@ df[2, ]
 df[,"marks"]
 df[3,"name"]
 
+#---------------------------------------------------------------------------
 
-
-#parti b
+#part b:import and explore the starwars dataset
 survey<-starwars
 dim(survey)
 glimpse(survey)
@@ -53,19 +54,20 @@ colSums(is.na(survey))
 
 # -------------------------------------------------------------------------
 
+#part c:filter,select,mutate and arrange the data
 
-
-#partie c
 survey_clean<-survey %>%
   filter(height>=100) %>%
   select(name,height,mass,gender) %>%
   mutate(bmi_like = mass/(height/1000)^2)  %>%
   arrange(desc(height))
+
+#drop_na() remove rows with missing height and mass
 survey_nona<-survey %>%
   drop_na(height,mass)
-
 survey_nona
 
+#pivot_longer() reshapes heightand mass into one column of name and one of values
 survey_long<-survey %>%
   select(name,height,mass) %>%
   pivot_longer(cols=c(height,mass),
