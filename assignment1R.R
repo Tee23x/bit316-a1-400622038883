@@ -37,7 +37,7 @@ m[1, ]
 m[, 2]
 m[2, 3]
 
-# data frame
+# data_frame
 df <- data.frame(
   name = c("cedric", "polly", "luffy"),
   marks = c(53, 47, 15),
