@@ -1,1 +1,2 @@
 # bit316-a1-400622038883 
+The dataset contains 87 characters and 14 variables. Several columns have missing values, most notably birth_year (44), mass (28) and height (6). Characters shorter than 100 cm were filtered out, leaving 74 characters. A body-mass-like index was then calculated, and rows with missing height or mass were removed in a separate step (survey_nona) to keep only complete records."
